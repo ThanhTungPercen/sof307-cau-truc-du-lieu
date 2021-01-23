@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="javaScript.js"></script>
+    <title>Bài Tập Vòng Lặp</title>
+</head>
+<div id="xuatKetQua">
+
+</div>
+
+<body>
+    
+    <form action="">
+        <div id="ketqua">
+           
+        </div>
+    </form>
+    <script>
+        var nodeKetQua = document.getElementById("ketqua");
+        var HTMLKetQua = "";
+        
+       
+        HTMLKetQua = HTMLKetQua + `<p> 1: Xuất ra tin nhắn 1 lần:  ${showMessage('Hello Word',1)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> 2: Xuất ra tin nhắn 10 lần:  ${showMessage10lan('Hôm nay trời đẹp quá',10)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> 4: Tính tổng từ 1 tới 100 :  ${Sum(100)}</p>`;
+  
+    
+        // <p>${tong1N(100)}</p>
+
+        // Ghi kết quả ra giao diện
+        nodeKetQua.innerHTML = HTMLKetQua;
+    </script>
+</body>
+
+</html>

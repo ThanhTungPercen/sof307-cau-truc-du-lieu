@@ -1,0 +1,10 @@
+html{
+    background: linear-gradient(to left, #ccffff 0%, #ccccff 100%)fixed;
+    font-family: 'Arima Madurai', cursive;
+    font-size:18px;
+    margin: 0 auto;
+}
+body{
+    padding-left: 50px;
+     border: 2px solid burlywood;
+ }

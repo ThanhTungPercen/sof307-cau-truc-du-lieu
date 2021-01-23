@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="https://github.com/hohieuit/javascript-coban/blob/master/de%20bai/1_function.txt">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300&display=swap" rel="stylesheet">
+    <script src="javacsript.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Bài Tập Hàm</title>
+</head>
+
+<body>
+    <form action="">
+        <div id="ketqua">
+
+        </div>
+    </form>
+
+    <script>
+        var nodeKetQua = document.getElementById("ketqua");
+        var HTMLKetQua = "";
+        // Bài 1 Tính tổng 2 số 
+        HTMLKetQua = HTMLKetQua + `<p> Tổng 2 số:  ${tong(2,3)}</p>`;
+        //  Bài 2 Sử dụng các hàm ở 1 để tính tổng, hiệu của n1,n2
+        HTMLKetQua = HTMLKetQua + `<p>Hiệu 2 sô: ${hieu(10,5)}</p>`;
+        // Bài 3 Viết hàm tính để nhân 2 số 
+        HTMLKetQua = HTMLKetQua + `<p> Tích 2 số:  ${tich(10,5)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Thương 2 số:  ${thuong(10,5)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Thương 2 số 10 và 0 là: ${thuong1(10,0)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Thương 2 số 0 và 10 là: ${chiaHaiSo(0,10)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Bình Phương số 5 là: ${binhPhuongMotSo(5)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Bình Phương 2 số 5 và 8 là: ${binhPhuongHaiSo(5,8)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Tìm số lớn nhất của 2 số 5 và 9 là: ${timSoLon(5,9)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Tìm số bé nhất của 2 số 5 và 9 là: ${timSoBe(5,9)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Trung bình cộng 2 số 5 và 9 là: ${tinhTrungBinh(5,9)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Chia lấy dư 2 số 10 và 9 là: ${chiLayDu(10,9)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Kiểm tra chia hết 2 số 40 và 20 là: ${ktChiHet(40,20)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Chi vi hình chữ nhật là: ${chuViHCN(40,20)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Diện Tích hình chữ nhật là: ${dienTichHCN(15,10)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Chu vi hình tròn là: ${chuViHT(3)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Diện Tích hình tròn là: ${dienTichHT(3)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Nối chuỗi: ${noi2Chuoi()}</p>`;      
+        HTMLKetQua = HTMLKetQua + `<p> In hoa chuỗi: ${inHoaChuoi()}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> kiểm tra tồn tại: ${ktTonTai()}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Đếm chuỗi: ${demChuoi()}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Nối chuỗi: ${catChuoi()}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> Kiểm tra tồn tại chuỗi s5: ${ktTontaiChuoi()}</p>`;
+       
+
+
+       
+
+        // Ghi kết quả ra giao diện
+        nodeKetQua.innerHTML = HTMLKetQua;
+    </script>
+
+</body>
+
+</html>

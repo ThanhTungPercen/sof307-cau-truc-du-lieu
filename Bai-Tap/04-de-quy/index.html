@@ -8,8 +8,26 @@
     <title>Bài Tập Về Đệ Quy</title>
 </head>
 <body>
+    <form action="">
+        <div id="ketqua">
+           
+        </div>
+    </form>
     <script>
+        var nodeKetQua = document.getElementById("ketqua");
+        var HTMLKetQua = "";
+    
+       
+        HTMLKetQua = HTMLKetQua + `<p> 1: Tính Tổng:  ${tinhTong(5)}</p>`;
+        HTMLKetQua = HTMLKetQua + `<p> 2: Tính Tổng:  ${tinhGiaiThua(5)}</p>`;
+        // HTMLKetQua = HTMLKetQua + `<p> 2: Tính Tổng:  ${fibonaxi(5)}</p>`;
+
         
+    
+        // <p>${tong1N(100)}</p>
+
+        // Ghi kết quả ra giao diện
+        nodeKetQua.innerHTML = HTMLKetQua;
     </script>
 </body>
 </html>

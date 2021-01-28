@@ -1,13 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="js.js"></script>
-    <title>Bài Tập Về Mãng</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="https://github.com/hohieuit/javascript-coban/blob/master/de%20bai/1_function.txt">
+    <script src="javascript.js"></script>
+    <title>Bài Tập Về Mảng</title>
+    <style>
+        html {
+            background: linear-gradient(to left, #ccffff 0%, #ccccff 100%)fixed;
+
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="traKQ">
+        <h1>BÀI TẬP VỀ MẢNG</h1>
+        <hr>
+        <div id="ketQua">
+
+        </div>
+    </div>
+    <script>
+        var nodeKetQuaMang = document.getElementById("ketQua");
+        var HTMLKetQuaMang = "";
+
+        HTMLKetQuaMang = HTMLKetQuaMang + `<p><a style='color: red'>Ctrl + Shift + I/Console</a> để xem kết quả.</p>`;
+
+        // 1. Tạo một mảng chứa các số từ 1 tới 10
+        var mangSo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // 2. Tạo một mảng lưu trữ sở thích cá nhân 
+        var mangSoThich = ["Chơi game", "Đánh bóng chuyền", "Đọc sách", "Đi du lịch", "Chụp ảnh", "Leo núi", "Đá bóng"];
+
+        // 3. Xuất mảng (1) ra console.log
+        console.log("Mảng gồm các số từ 1 đến 10: [" + mangSo + "]");
+        console.log("Độ dài mảng: " + mangSo.length + " số.");
+
+        // 4. Xuất mảng (2) ra console.log
+        console.log("Mảng sở thích gồm: [" + mangSoThich + "]");
+        console.log("Bao gồm: " + mangSoThich.length + " sở thích khác nhau.");
+
+        // 5. Viết hàm trả ra danh sách n số nhỏ hơn n
+        //     - getLessThan(n): number[]
+        // 6. Sử dụng hàm (5) xuất ra console danh sách các số nhỏ hơn 100 
+        console.log("100 số bé hơn 100 bao gồm: " + getLessThan(100));
+
+        // 7. Viết hàm trả ra danh sách tất cả các số lẻ nhỏ hơn n
+        //     - getOddlessThan(n): number[]
+        // 8. Sử dụng hàm (7) xuất ra console danh sách toàn bộ số lẻ <1000
+        console.log("Số lẻ bé hơn 1000 bao gồm: " + getOddlessThan(1000));
+
+        // 9. Viết hàm tìm ra vị trí phần tử đầu tiên nằm trong mảng 
+        //     - findFirst(arr, chuoiCanTim): number
+        // 10. Sử dụng hàm (9). 
+        //     - Mảng: ["bóng chuyền", "bóng rổ", "bóng đá"]    
+        //     - string cần tìm: bóng rổ
+        //     - kết quả trả ra: vị trí 2
+        var arr = ["bóng chuyền", "bóng rổ", "bóng đá", "bóng rổ"];
+        var chuoiCanTim = "bóng rổ";
+        console.log("Mảng có giá trị: [" + arr + "]");
+        console.log("Chuỗi cần tìm: " + chuoiCanTim);
+        console.log("Vị trí 'bóng rổ' đầu tiên nằm trong mảng ở vị trí: " + findFirst(arr, chuoiCanTim));
+
+        // 11. Viết hàm tìm ra vị trí phần tử cuối cùng nằm trong mảng 
+        //     - findLast(arr, chuoiCanTim): number
+        // 12. Sử dụng hàm (11). 
+        //     - Mảng: ["bóng chuyền", "bóng rổ", "bóng đá"]    
+        //     - string cần tìm: bóng rổ
+        //     - kết quả trả ra: vị trí 2
+        console.log("Vị trí 'bóng rổ' cuối cùng nằm trong mảng ở vị trí: " + findLast(arr, chuoiCanTim));
+
+        // 13. Viết hàm tìm ra vị trí tất cả phần tử nằm trong mảng 
+        //     - find(arr, chuoiCanTim): numer[]
+        // 14. Sử dụng hàm (13). 
+        //     - Mảng: ["bóng chuyền", "bóng rổ", "bóng đá", "bóng rổ"]    
+        //     - string cần tìm: bóng rổ
+        //     - kết quả trả ra: vị trí [2,4]
+        console.log("Vị trí 'bóng rổ' nằm trong mảng ở vị trí: [" + find(arr, chuoiCanTim) + "]");
+
+        // 15. Viết hàm thêm một phần tử vào mảng 
+        //     - add(arr, chuoiCanThem): []
+        // 16. Sử dụng hàm (15). 
+        //     - Mảng: ["bóng chuyền", "bóng rổ", "bóng đá"]    
+        //     - string cần thêm: bóng rổ
+        //     - kết quả trả ra: ["bóng chuyền", "bóng rổ", "bóng đá", "bóng rổ"]
+        var chuoiCanThem = "bóng bàn";
+        console.log("Chuỗi cần thêm: " + chuoiCanThem);
+        console.log("Mảng sau khi thêm 'bóng bàn', ta được mảng có giá trị: [" + add(arr, chuoiCanThem) + "]");
+        // 17. Viết hàm thêm một phần tử vào mảng, nhưng nếu phần tử đó đã tồn tại thì ko thêm nữa.
+        //     addIfNotExist(arr,chuoiCanThem):[]
+        // 18. Sử dụng hàm (17). 
+        //     - Mảng: ["bóng chuyền", "bóng rổ", "bóng đá"]    
+        //     - string cần thêm: bóng rổ
+        //     - kết quả trả ra: ["bóng chuyền", "bóng rổ", "bóng đá"]
+        var arr1 = ["bóng chuyền", "bóng rổ", "bóng đá"];
+        var chuoiCanThem1 = "bóng rổ";
+        console.log("Mảng có giá trị: [" + arr1 + "]");
+        console.log("Chuỗi cần thêm: " + chuoiCanThem1);
+        console.log("Mảng sau khi thêm 'bóng rổ', ta được mảng có giá trị: [" + addIfNotExist(arr1, chuoiCanThem1) +
+            "]");
+
+        // 19. Viết hàm xoá toàn bộ phần tử ra khỏi mảng 
+        //     - delete(arr,chuoiCanXoa): []
+        // 20. Sử dụng hàm (19). 
+        //     - Mảng: ["bóng chuyền", "bóng rổ", "bóng đá","bóng chuyền"]    
+        //     - string cần thêm: bóng chuyền
+        //     - kết quả trả ra: ["bóng rổ", "bóng đá"]
+        var arr2 = ["bóng chuyền", "bóng rổ", "bóng đá", "bóng chuyền"];
+        var chuoiCanXoa = "bóng chuyền";
+        console.log("Mảng có giá trị: [" + arr2 + "]");
+        console.log("Chuỗi cần xóa: " + chuoiCanXoa);
+        console.log("Mảng sau khi xóa 'bóng chuyền', ta được mảng có giá trị: [" + xoaPhanTu(arr2, chuoiCanXoa) + "]");
+
+
+        nodeKetQuaMang.innerHTML = HTMLKetQuaMang;
+    </script>
+
 </body>
+
 </html>

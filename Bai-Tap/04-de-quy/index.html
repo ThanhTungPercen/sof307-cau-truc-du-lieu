@@ -6,30 +6,21 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="description" content="https://github.com/hohieuit/javascript-coban/blob/master/de%20bai/1_function.txt">
     <link rel="stylesheet" href="style.css">
-    <script src="js.js"></script>
+    <script src="javascipt.js"></script>
     <title>Bài Tập Về Đệ Quy</title>
 </head>
 <body>
-    <form action="">
-        <div id="ketqua">
-           
-        </div>
-    </form>
-    <script>
-        var nodeKetQua = document.getElementById("ketqua");
-        var HTMLKetQua = "";
-    
+    <div class="traKQ">
        
-        HTMLKetQua = HTMLKetQua + `<p> 1: Tính Tổng:  ${tinhTong(5)}</p>`;
-        HTMLKetQua = HTMLKetQua + `<p> 2: Tính Tổng:  ${tinhGiaiThua(5)}</p>`;
-        // HTMLKetQua = HTMLKetQua + `<p> 2: Tính Tổng:  ${fibonaxi(5)}</p>`;
+        <div id="ketQua">
 
-        
-    
-        // <p>${tong1N(100)}</p>
-
-        // Ghi kết quả ra giao diện
-        nodeKetQua.innerHTML = HTMLKetQua;
-    </script>
+        </div>
+    </div>
+    <script>
+        var nodeKetQuaMang = document.getElementById("ketQua");
+        var HTMLKetQuaMang = "";
+        HTMLKetQuaMang = HTMLKetQuaMang + `<p><a style='color: yellow;'>Ctrl + Shift + I/Console</a> để xem kết quả.</p>`;
+        nodeKetQuaMang.innerHTML = HTMLKetQuaMang;
+        </script>
 </body>
 </html>
